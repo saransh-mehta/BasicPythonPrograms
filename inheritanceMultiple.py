@@ -1,7 +1,8 @@
 #multiple inheritance
-
+# making parent class Teacher
 class teacher():
 
+    #it has following four methods
     def __init__(self,tecId=1,tecName='sunita',subject='python'):
         self.tecId=tecId
         self.tecName=tecName
@@ -16,7 +17,7 @@ class teacher():
         print (self.tecName)
         print (self.tecId)
         print (self.subject)
-class student():
+class student():                  # making another parent class student
 
     def __init__(self,Id=2,name='geeta'):
 
@@ -27,8 +28,12 @@ class student():
     def getId(self):
         return self.Id
 
+#deriving inheritance for class school
+#from both teacher and student
+
 class school(teacher,student):
 
+    # it can inherit methods from both, but cant get the object data
     def __init__(self,tecId=3,tecName='babita',subject='hindi',Id=4,name='suresh',schId=6):
 
         teacher.__init__(self,tecId,tecName,subject)
